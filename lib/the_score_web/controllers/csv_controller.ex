@@ -33,21 +33,21 @@ defmodule TheScoreWeb.CsvController do
 
     [
       [
-        "name",
-        "team",
-        "pos",
-        "att_per_game",
-        "att",
-        "total_rush",
-        "rush_per_yard",
-        "rush_per_game",
-        "rush_td",
-        "long_rush",
-        "rush_1st_down",
-        "rush_1st_down_per",
-        "rush_20_yards",
-        "rush_40_yards",
-        "fumble"
+        "Player",
+        "Team",
+        "Pos",
+        "Att/G",
+        "Att",
+        "Yrds",
+        "Avg",
+        "Yrds/G",
+        "TD",
+        "Lng",
+        "1st",
+        "1st%",
+        "20+",
+        "40+",
+        "FUM"
       ]
     ]
     |> Stream.concat(
