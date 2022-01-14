@@ -54,4 +54,8 @@ We will evaluate you on your ability to solve the problem defined in the require
 If you have any questions regarding requirements, do not hesitate to email your contact at theScore for clarification.
 
 ### Installation and running this solution
-... TODO
+1. Download repo
+2. PostgreSQL DB required. Need user with name “meraj” // update credentials in dev.exs
+3. mix deps.get
+4. mix ecto.setup
+5. mix phx.server
