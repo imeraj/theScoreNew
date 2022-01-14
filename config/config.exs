@@ -10,6 +10,10 @@ import Config
 config :the_score,
   ecto_repos: [TheScore.Repo]
 
+config :turbo_ecto, Turbo.Ecto,
+  repo: TheScore.Repo,
+  per_page: 10
+
 # Configures the endpoint
 config :the_score, TheScoreWeb.Endpoint,
   url: [host: "localhost"],

@@ -53,6 +53,7 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/swoosh" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/jaxon" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/elixir_make" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/turbo_ecto" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -113,5 +114,8 @@
     <orderEntry type="library" name="jiffy" level="project" />
     <orderEntry type="library" name="inch_ex" level="project" />
     <orderEntry type="library" name="elixir_make" level="project" />
+    <orderEntry type="library" name="turbo_ecto" level="project" />
+    <orderEntry type="library" name="ex_machina" level="project" />
+    <orderEntry type="library" name="credo" level="project" />
   </component>
 </module>

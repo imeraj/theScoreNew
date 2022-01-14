@@ -17,8 +17,8 @@ defmodule TheScore.Stats do
       [%Rushing{}, ...]
 
   """
-  def list_rushings do
-    Repo.all(Rushing)
+  def list_rushings(params) do
+    Turbo.Ecto.turbo(from(r in Rushing), params)
   end
 
   @doc """
@@ -100,5 +100,13 @@ defmodule TheScore.Stats do
   """
   def change_rushing(%Rushing{} = rushing, attrs \\ %{}) do
     Rushing.changeset(rushing, attrs)
+  end
+
+  def filter_rushings(params) do
+    Turbo.Ecto.turbo(from(r in Rushing), params)
+  end
+
+  def sort_rushings(params) do
+    Turbo.Ecto.turbo(from(r in Rushing), params)
   end
 end

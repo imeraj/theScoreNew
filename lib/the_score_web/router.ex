@@ -17,7 +17,10 @@ defmodule TheScoreWeb.Router do
   scope "/", TheScoreWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get("/", ScoreController, :index)
+    post("/filter", ScoreController, :filter)
+    post("/sort", ScoreController, :sort)
+    get("/csv", CsvController, :export)
   end
 
   # Other scopes may use custom stacks.
