@@ -51,6 +51,8 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/phoenix_ecto" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/phoenix_live_dashboard" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/swoosh" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/jaxon" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/elixir_make" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -105,5 +107,11 @@
     <orderEntry type="library" name="cowboy_telemetry" level="project" />
     <orderEntry type="library" name="kadabra" level="project" />
     <orderEntry type="library" name="x509" level="project" />
+    <orderEntry type="library" name="jaxon" level="project" />
+    <orderEntry type="library" name="benchee_html" level="project" />
+    <orderEntry type="library" name="poison" level="project" />
+    <orderEntry type="library" name="jiffy" level="project" />
+    <orderEntry type="library" name="inch_ex" level="project" />
+    <orderEntry type="library" name="elixir_make" level="project" />
   </component>
 </module>
