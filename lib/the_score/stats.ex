@@ -109,4 +109,8 @@ defmodule TheScore.Stats do
   def sort_rushings(params) do
     Turbo.Ecto.turbo(from(r in Rushing), params)
   end
+
+  def total_rushings() do
+    Repo.aggregate(Rushing, :count, :id)
+  end
 end

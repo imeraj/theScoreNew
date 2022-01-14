@@ -54,6 +54,8 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/jaxon" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/elixir_make" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/turbo_ecto" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/csv" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/parallel_stream" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -117,5 +119,12 @@
     <orderEntry type="library" name="turbo_ecto" level="project" />
     <orderEntry type="library" name="ex_machina" level="project" />
     <orderEntry type="library" name="credo" level="project" />
+    <orderEntry type="library" name="csv" level="project" />
+    <orderEntry type="library" name="parallel_stream" level="project" />
+    <orderEntry type="library" name="benchfella" level="project" />
+    <orderEntry type="library" name="ex_csv" level="project" />
+    <orderEntry type="library" name="csvlixir" level="project" />
+    <orderEntry type="library" name="cesso" level="project" />
+    <orderEntry type="library" name="earmark" level="project" />
   </component>
 </module>

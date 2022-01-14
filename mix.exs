@@ -50,7 +50,8 @@ defmodule TheScore.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:jaxon, "~> 1.0"},
-      {:turbo_ecto, "~> 1.0.1"}
+      {:turbo_ecto, "~> 1.0.1"},
+      {:csv, "~> 1.4.0"}
     ]
   end
 
