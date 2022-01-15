@@ -6,8 +6,9 @@ defmodule TheScoreWeb.ScoreController do
   def index(conn, params) do
     filter_criteria = Map.get(params, "filter_criteria")
     sort_criteria = Map.get(params, "sort_criteria")
+    page = Map.get(params, "page")
 
-    params = build_params(filter_criteria, sort_criteria)
+    params = build_params(filter_criteria, sort_criteria, page)
     listings = Stats.list_rushings(params)
 
     render(conn, "index.html",
@@ -40,9 +41,12 @@ defmodule TheScoreWeb.ScoreController do
     )
   end
 
-  defp build_params(filter_criteria, sort_criteria) do
+  defp build_params(filter_criteria, sort_criteria, page) do
     sort_criteria = criteria(sort_criteria)
-    %{"q" => %{"name_ilike" => filter_criteria || ""}, "s" => sort_criteria}
+
+    %{"q" => %{"name_ilike" => filter_criteria || ""}, "s" => sort_criteria, "page" => page}
+    |> Enum.reject(fn {_, v} -> is_nil(v) end)
+    |> Map.new()
   end
 
   defp build_filter_params(name) do

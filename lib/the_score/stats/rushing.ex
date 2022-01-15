@@ -3,21 +3,21 @@ defmodule TheScore.Stats.Rushing do
   import Ecto.Changeset
 
   schema "rushings" do
-    field(:att, :integer)
-    field(:att_per_game, :float)
-    field(:fumble, :integer)
-    field(:long_rush, TheScore.Stats.String)
     field(:name, :string)
+    field(:team, :string)
     field(:pos, :string)
+    field(:att_per_game, :float)
+    field(:att, :integer)
+    field(:total_rush, TheScore.Stats.String)
+    field(:long_rush, TheScore.Stats.String)
+    field(:rush_per_yard, :float)
+    field(:rush_per_game, :float)
     field(:rush_1st_down, :integer)
     field(:rush_1st_down_per, :float)
     field(:rush_20_yards, :integer)
     field(:rush_40_yards, :integer)
-    field(:rush_per_game, :float)
-    field(:rush_per_yard, :float)
     field(:rush_td, :integer)
-    field(:team, :string)
-    field(:total_rush, TheScore.Stats.String)
+    field(:fumble, :integer)
 
     timestamps()
   end

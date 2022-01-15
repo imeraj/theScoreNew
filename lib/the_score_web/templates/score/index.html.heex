@@ -1,7 +1,7 @@
 <h1 align="center">All Rushings (Page: <%= @page.current_page %>) </h1>
 
-<%= render "filter_form.html", Map.put(assigns, :action, Routes.score_path(@conn, :filter)) %>
-<%= render "sort_form.html", Map.put(assigns, :action, Routes.score_path(@conn, :sort)) %>
+<%= render "filter_form.html", conn: @conn %>
+<%= render "sort_form.html", conn: @conn  %>
 
 <%= link "Download CSV", to: Routes.csv_path(@conn, :export, filter_criteria: assigns[:filter_criteria], sort_criteria: assigns[:sort_criteria]) %>
 
@@ -12,9 +12,9 @@
     <th>Pos</th>
     <th>Att/G</th>
     <th>Att</th>
-    <th>Yrds</th>
+    <th>Yds</th>
     <th>Avg</th>
-    <th>Yrds/G</th>
+    <th>Yds/G</th>
     <th>TD</th>
     <th>Lng</th>
     <th>1st</th>
@@ -25,7 +25,23 @@
   </tr>
 
   <%= for rushing <- @rushings do %>
-    <tr><td><%= rushing.name %></td><td><%= rushing.team  %></td><td><%= rushing.pos %></td><td><%= rushing.att_per_game %></td><td><%= rushing.att %></td><td><%= rushing.total_rush %></td><td><%= rushing.rush_per_yard %></td><td><%= rushing.rush_per_game %></td><td><%= rushing.rush_td %></td><td><%= rushing.long_rush %></td><td><%= rushing.rush_1st_down %></td><td><%= rushing.rush_1st_down_per %></td><td><%= rushing.rush_20_yards %></td><td><%= rushing.rush_40_yards %></td><td><%= rushing.fumble %></td></tr>
+    <tr>
+        <td><%= rushing.name %></td>
+        <td><%= rushing.team  %></td>
+        <td><%= rushing.pos %></td>
+        <td><%= rushing.att_per_game %></td>
+        <td><%= rushing.att %></td>
+        <td><%= rushing.total_rush %></td>
+        <td><%= rushing.rush_per_yard %></td>
+        <td><%= rushing.rush_per_game %></td>
+        <td><%= rushing.rush_td %></td>
+        <td><%= rushing.long_rush %></td>
+        <td><%= rushing.rush_1st_down %></td>
+        <td><%= rushing.rush_1st_down_per %></td>
+        <td><%= rushing.rush_20_yards %></td>
+        <td><%= rushing.rush_40_yards %></td>
+        <td><%= rushing.fumble %></td>
+    </tr>
   <% end  %>
 </table>
 

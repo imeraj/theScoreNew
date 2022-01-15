@@ -1,11 +1,8 @@
-<%= form_for @conn, Routes.score_path(@conn, :sort), [as: :sort], fn f -> %>
+<%= form_for @conn, Routes.score_path(@conn, :sort), [as: :sort, method: :post], fn f -> %>
+    <div>
+        <%= select f, :sort_criteria, ["Total Rushing Yards": 1,
+            "Longest Rush": 2, "Total Rushing Touchdowns": 3] %>
+    </div>
 
-<div>
-    <%= select f, :sort_criteria, ["Total Rushing Yards": 1,
-        "Longest Rush": 2, "Total Rushing Touchdowns": 3] %>
-</div>
-
-<%= submit "Sort" %>
-<input name="_method" type="hidden" value="post"/>
-
+    <%= submit "Sort" %>
 <% end %>
